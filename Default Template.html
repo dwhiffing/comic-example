@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="authoring-tool" content="$VERSION" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+    <title>$TITLE</title>
+    <!-- write your code here -->
+    <style>
+      body {
+        background-color: #1c1c1b;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+    </style>
+    $CENTER_STYLE $CREATEJS_LIBRARY_SCRIPTS $ANIMATE_CC_SCRIPTS $SCRIPT_START
+    var canvas, stage, exportRoot, anim_container, dom_overlay_container,
+    fnStartAnimation; function init() { canvas =
+    document.getElementById("$CANVAS_ID"); anim_container =
+    document.getElementById("$ANIM_CONTAINER_ID"); dom_overlay_container =
+    document.getElementById("dom_overlay_container"); $CREATE_LOADER
+    $LOAD_MANIFEST $PRELOAD_ASSETS } $HANDLE_FILE_LOAD_START
+    $HANDLE_FILE_LOAD_BODY $HANDLE_FILE_LOAD_END $HANDLE_COMPLETE_START
+    $CREATE_STAGE $START_ANIMATION $RESP_HIDPI $HANDLE_COMPLETE_END $PLAYSOUND
+    $SCRIPT_END
+    <!-- write your code here -->
+  </head>
+  <body onload="init();" style="margin:0px;">
+    <div
+      id="$ANIM_CONTAINER_ID"
+      style="background-color:$BG; width:$WTpx; height:$HTpx"
+    >
+      <canvas
+        id="$CANVAS_ID"
+        width="$WT"
+        height="$HT"
+        style="position: absolute; display: $CANVAS_DISP; background-color:$BG;"
+      ></canvas>
+      <div
+        id="dom_overlay_container"
+        style="pointer-events:none; overflow:hidden; width:$WTpx; height:$HTpx; position: absolute; left: 0px; top: 0px; display: $CANVAS_DISP;"
+      ></div>
+    </div>
+    $PRELOADER_DIV
+  </body>
+</html>
